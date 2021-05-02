@@ -5,7 +5,7 @@
 ** Login   <thormster@epitech.net>
 ** 
 ** Started on  Sun May  2 15:19:02 2021 thormster
-** Last update Sun May  2 23:03:58 2021 thormster
+** Last update Sun May  2 23:36:39 2021 thormster
 */
 
 #include	"header.h"
@@ -53,13 +53,6 @@ char		*genPwd(t_password *p, int r1low, int r1high, int r2low, int r2high)
   }
   p->pwd[x] = '\0';
   return (p->pwd);
-}
-
-int		display_time(int time, char *unit)
-{
-  printf("  %d %s\n", time, unit);
-  xputstr("(with cycle of 1x10^8 pass/sec)\n");
-  return (0);
 }
 
 int		cracktime(double possibility, float cycle)

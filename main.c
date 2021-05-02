@@ -5,7 +5,7 @@
 ** Login   <thormster@epitech.net>
 ** 
 ** Started on  Sun May  2 14:49:58 2021 thormster
-** Last update Sun May  2 23:21:16 2021 thormster
+** Last update Sun May  2 23:37:28 2021 thormster
 */
 
 #include	"header.h"
@@ -24,26 +24,6 @@ int		get_len(char *l)
   }
   len = my_atoi(l);
   return (len);
-}
-
-void		free_struct(t_password *p)
-{
-  free(p->type);
-  free(p->pwd);
-  free(p);
-}
-
-void		display_res(t_password *p)
-{
-  xputstr("################################################################\n");
-  xputstr("Password: ");
-  xputstr(p->pwd);
-  xputchar('\n');
-  xputstr("\nThe total number of passwords possible :  ");
-  printf("%.1e\n\n", p->possibilities);
-  xputstr("Time required to crack this pass :");
-  cracktime(p->possibilities, 100000000000);
-  xputstr("################################################################\n");
 }
 
 int		get_type(t_password *p)
@@ -72,6 +52,13 @@ int		get_type(t_password *p)
     return (ERR);
   }
   return (0);
+}
+
+void		free_struct(t_password *p)
+{
+  free(p->type);
+  free(p->pwd);
+  free(p);
 }
 
 int		main(int ac, char **av)

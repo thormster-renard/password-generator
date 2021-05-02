@@ -5,7 +5,7 @@
 ** Login   <thormster@epitech.net>
 ** 
 ** Started on  Sun May  2 21:53:13 2021 thormster
-** Last update Sun May  2 23:21:11 2021 thormster
+** Last update Sun May  2 23:38:13 2021 thormster
 */
 
 #ifndef		_HEADER_H_
@@ -33,22 +33,34 @@ typedef	struct	s_password
   int		r2high;
 }		t_password;
 
-int		my_atoi(char*);
-t_password	*init_s_password(char*, char*);
+/* xput.c */
 void		xputchar(char);
 void		xputstr(char*);
-int		randomInRanges(int, int, int, int);
-char		*genPwd(t_password*, int, int, int, int);
-char		pick_a_digit(int, int);
-void		usage(void);
-double		passwordPossibility(int, int);
-int		cracktime(double, float);
-char		*def_gen_pass(int);
-int		get_len(char*);
-void		display_res(t_password*);
-int		display_time(int, char*);
+
+/* my.c */
+int		my_atoi(char*);
 int		xstrlen(char*);
 char		*xstrcpy(char*, char*);
+
+/* init.c */
+t_password	*init_s_password(char*, char*);
+
+/* core.c */
+int		randomInRanges(int, int, int, int);
+char		*genPwd(t_password*, int, int, int, int);
+double		passwordPossibility(int, int);
+int		cracktime(double, float);
+
+/* display.c */
+void		display_res(t_password*);
+int		display_time(int, char*);
+
+/* usage.c */
+void		usage(void);
+
+/* main.c */
+int		get_len(char*);
 int		get_type(t_password*);
+void		free_struct(t_password*);
 
 #endif /* !HEADER_H_ */

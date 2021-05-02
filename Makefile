@@ -1,6 +1,6 @@
 
-#CFLAGS= -W -Wall -ansi -std=c99 -pedantic -Wextra -Werror
-CFLAGS=	-g3
+CFLAGS= -W -Wall -ansi -std=c99 -pedantic -Wextra -Werror
+#CFLAGS=	-g3
 
 LIB=	-lm
 
